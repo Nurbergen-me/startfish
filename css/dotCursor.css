@@ -1,0 +1,62 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100%; /* requires for stable body height */
+}
+
+body {
+  min-height: 100%; /* requires for 'mix-blend-mode' */
+  background-color: #fff; /* requires for 'mix-blend-mode' */
+}
+
+.header {
+  position: relative;
+  overflow: visible;
+}
+
+.col.col--full {
+  width: 100%;
+}
+
+html,
+html *,
+body,
+body * {
+  cursor: none !important;
+}
+
+.cursor-dot,
+.cursor-dot-outline {
+  pointer-events: none;
+  z-index: 10000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #f4f4f4;
+  mix-blend-mode: difference;
+}
+
+.cursor-dot-outline {
+  width: 40px;
+  height: 40px;
+  /* background-color: rgba(127, 195, 108, 0.5); */
+}
+/*# sourceMappingURL=dotCursor.css.map */

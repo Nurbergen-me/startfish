@@ -216,11 +216,11 @@
         }
     }
     .steps_circle:not(:first-child) {
-        margin-top: 20px;
+        margin-top: -80px;
         margin-left: 0;
     }
     .steps_circle:nth-child(even) {
-        margin-left: 0;
+        margin-left: 260px;
     }
     .steps {
         padding-bottom: 0;
@@ -342,6 +342,13 @@
 @media screen and (max-width: 576px) {
     .container {
         width: 90%;
+    }
+    .steps_circle:not(:first-child) {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .steps_circle:nth-child(even) {
+        margin-left: 0;
     }
     .templates {
         &_wrap {

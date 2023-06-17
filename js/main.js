@@ -29,3 +29,16 @@ if (steps) {
         
     })
 }
+
+let buttonL = document.querySelector('.button-l')
+let buttonS = document.querySelector('.button-s')
+
+if (buttonL) {
+    buttonL.addEventListener('mousemove', e => {
+        let rect = e.target.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+        buttonS.style.left = (x - 20) * 1.5 + 'px'
+        buttonS.style.top = (y - 20) * 1.5 + 'px'
+    })
+}
