@@ -155,13 +155,53 @@
             }
         }
         .types {
+            padding-bottom: 0;
             &_wrap {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
+            }
+
+            &_info {
+                background: none;
+                z-index: -1;
+                position: relative;
+                opacity: 1;
+                display: none;
+            }
+
+            &_img {
+                aspect-ratio: 5 / 3;
+            }
+
+            &_item {
+                aspect-ratio: 5 / 3;
+
+                &.active {
+                    aspect-ratio: initial;
+                    .types_img {
+                        position: relative;
+                    }
+                    .types_info {
+                        padding: 20px 0;
+                        display: block;
+                    }
+                }
+            }
+            &_name {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            &_text {
+                font-size: 12px;
             }
         }
         .catalog {
+            padding-bottom: 0;
             &_wrap {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 11px 7px;
+                margin-top: 40px;
+                margin-bottom: 60px;
             }
         }
         .plans {
@@ -190,13 +230,27 @@
     h1,h2 {
         font-size: 32px;
     }
+    .nav {
+        padding: 23px 0;
+        &_menu, &_btns {
+            display: none;
+        }
+        &_burger {
+            display: flex;
+        }
+    }
     .header {
         padding-bottom: 240px;
         &_offer {
             display: block;
+            padding-top: 50px;
         }
         &_desc {
             margin-bottom: 60px;
+        }
+        &_bubbles {
+            justify-content: end;
+            margin-right: 10%;
         }
         &_bubble {
             width: 90px;
@@ -230,11 +284,6 @@
         }
         &_circle {
             zoom: 0.8;
-        }
-    }
-    .nav {
-        &_menu {
-            display: none;
         }
     }
     .cons {
@@ -343,12 +392,15 @@
     .container {
         width: 90%;
     }
+    .steps_circle {
+        zoom: 0.7;
+    }
     .steps_circle:not(:first-child) {
-        margin-top: 20px;
+        margin-top: 5px;
         margin-left: 0;
     }
     .steps_circle:nth-child(even) {
-        margin-left: 0;
+        margin-left: 120px;
     }
     .templates {
         &_wrap {

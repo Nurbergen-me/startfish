@@ -13,6 +13,34 @@
     <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
+    <div class="hidden">
+        <div class="container">
+            <div class="hidden_wrap">
+                <div class="hidden_menu">
+                    <a href="stamps.html" class="hidden_menu_item">
+                        печати
+                    </a>
+                    <a href="index.html#templates" class="hidden_menu_item">
+                        фирменный стиль
+                    </a>
+                    <a href="templates.html" class="hidden_menu_item">
+                        web сайты
+                    </a>
+                </div>
+                <div class="hidden_socials">
+                    <a href="#" class="hidden_socials_item">
+                        whatsapp
+                    </a>
+                    <a href="#" class="hidden_socials_item">
+                        telegram
+                    </a>
+                </div>
+                <button class="hidden_btn">
+                    Обсудить проект
+                </button>
+            </div>
+        </div>
+    </div>
     <header class="header" id="header">
         <div class="container">
             <div class="nav">
@@ -44,25 +72,46 @@
                         <img src="img/heart-icon.svg" alt="heart">
                     </a>
                 </div>
+                <div class="nav_burger">
+                    <div class="nav_burger_menu">
+                        <div class="nav_burger_item"></div>
+                        <div class="nav_burger_item"></div>
+                    </div>
+                    <svg class="nav_burger_close" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.707107 13.4356C0.316586 13.0451 0.316586 12.4119 0.707107 12.0214L12.0208 0.707701C12.4113 0.317166 13.0445 0.31718 13.435 0.707701C13.8256 1.09822 13.8256 1.73138 13.435 2.12192L2.12132 13.4356C1.7308 13.8261 1.09763 13.8261 0.707107 13.4356Z" fill="#141736"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.706955 0.707107C1.09748 0.316586 1.73065 0.316586 2.12117 0.707107L13.4349 12.0208C13.8254 12.4113 13.8254 13.0445 13.4349 13.435C13.0444 13.8256 12.4112 13.8256 12.0207 13.435L0.706954 2.12132C0.316433 1.7308 0.316434 1.09763 0.706955 0.707107Z" fill="#141736"/>
+                    </svg>
+                </div>
             </div>
             <div class="header_offer">
-                <h1 class="header_title">
-                    Cтудия экспресс упаковки бизнеса
-                </h1>
-                <div class="header_info">
-                    <div class="header_desc">
-                        Мы создаем дизайн для людей, <br>
-                        которые хотят получить качественный продукт <br>
-                        и не хотят тратить много времени и сил.
+                <h1 class="header_title animation_slide">
+                    <div>
+                        <p class="slide-up">
+                            Cтудия экспресс
+                        </p>
                     </div>
-                    <div class="header_bubbles">
-                        <div class="header_bubble">
+                    <div>
+                        <p class="slide-up">
+                            упаковки бизнеса
+                        </p>
+                    </div>
+                </h1>
+                <div class="header_info animation_slide">
+                    <div class="header_desc">
+                        <p class="slide-up">
+                            Мы создаем дизайн для людей, <br>
+                            которые хотят получить качественный продукт <br>
+                            и не хотят тратить много времени и сил.
+                        </p>
+                    </div>
+                    <div class="header_bubbles animation_slide">
+                        <div class="header_bubble scale-up">
                             Печати
                         </div>
-                        <div class="header_bubble firm-style">
+                        <div class="header_bubble firm-style scale-up">
                             Фирменный стиль
                         </div>
-                        <div class="header_bubble web-sites">
+                        <div class="header_bubble web-sites scale-up">
                             Web <br> сайты
                         </div>
                     </div>
@@ -72,58 +121,66 @@
     </header>
     <section class="cons" id="cons">
         <div class="container">
-            <div class="cons_wrap">
-                <div class="cons_item">
-                    <div class="cons_img">
-                        <img src="img/pros-1-icon.svg" alt="cons icon" class="cons_icon">
-                    </div>
-                    <div class="cons_info">
-                        <h4 class="cons_name">
-                            Быстрый <br> старт
-                        </h4>
-                        <p class="cons_desc">
-                            Наш сервис позволяет вам быстро создать брендинг для вашего бизнеса, благодаря готовым шаблонам.
-                        </p>
-                    </div>
-                </div>
-                <div class="cons_item">
-                    <div class="cons_img">
-                        <img src="img/pros-2-icon.svg" alt="cons icon" class="cons_icon">
-                    </div>
-                    <div class="cons_info">
-                        <h4 class="cons_name">
-                            Простая <br>
-                            реализация проекта
-                        </h4>
-                        <p class="cons_desc">
-                            Для получения готового сайта или фирменного стиля нужно выбрать понравившийся шаблон и отправить нам данные для внесения их в шаблон.
-                        </p>
+            <div class="cons_wrap animation_slide">
+                <div>
+                    <div class="cons_item slide-up">
+                        <div class="cons_img">
+                            <img src="img/pros-1-icon.svg" alt="cons icon" class="cons_icon">
+                        </div>
+                        <div class="cons_info">
+                            <h4 class="cons_name">
+                                Быстрый <br> старт
+                            </h4>
+                            <p class="cons_desc">
+                                Наш сервис позволяет вам быстро создать брендинг для вашего бизнеса, благодаря готовым шаблонам.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="cons_item">
-                    <div class="cons_img">
-                        <img src="img/pros-3-icon.svg" alt="cons icon" class="cons_icon">
-                    </div>
-                    <div class="cons_info">
-                        <h4 class="cons_name">
-                            Неограниченная <br> гибкость
-                        </h4>
-                        <p class="cons_desc">
-                            Мы предоставляем широкий выбор шаблонов, которые можно использовать под любые потребности и стиль вашего бизнеса.
-                        </p>
+                <div>
+                    <div class="cons_item slide-up">
+                        <div class="cons_img">
+                            <img src="img/pros-2-icon.svg" alt="cons icon" class="cons_icon">
+                        </div>
+                        <div class="cons_info">
+                            <h4 class="cons_name">
+                                Простая <br>
+                                реализация проекта
+                            </h4>
+                            <p class="cons_desc">
+                                Для получения готового сайта или фирменного стиля нужно выбрать понравившийся шаблон и отправить нам данные для внесения их в шаблон.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="cons_item">
-                    <div class="cons_img">
-                        <img src="img/pros-4-icon.svg" alt="cons icon" class="cons_icon">
+                <div>
+                    <div class="cons_item slide-up">
+                        <div class="cons_img">
+                            <img src="img/pros-3-icon.svg" alt="cons icon" class="cons_icon">
+                        </div>
+                        <div class="cons_info">
+                            <h4 class="cons_name">
+                                Неограниченная <br> гибкость
+                            </h4>
+                            <p class="cons_desc">
+                                Мы предоставляем широкий выбор шаблонов, которые можно использовать под любые потребности и стиль вашего бизнеса.
+                            </p>
+                        </div>
                     </div>
-                    <div class="cons_info">
-                        <h4 class="cons_name">
-                            Выразительная <br> уникальность
-                        </h4>
-                        <p class="cons_desc">
-                            Каталог уникальных фирменных стилей и веб-шаблонов, созданный нашими дизайнерами, позволит вам выделить ваш бизнес среди конкурентов и привлечь новых клиентов.
-                        </p>
+                </div>
+                <div>
+                    <div class="cons_item slide-up">
+                        <div class="cons_img">
+                            <img src="img/pros-4-icon.svg" alt="cons icon" class="cons_icon">
+                        </div>
+                        <div class="cons_info">
+                            <h4 class="cons_name">
+                                Выразительная <br> уникальность
+                            </h4>
+                            <p class="cons_desc">
+                                Каталог уникальных фирменных стилей и веб-шаблонов, созданный нашими дизайнерами, позволит вам выделить ваш бизнес среди конкурентов и привлечь новых клиентов.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

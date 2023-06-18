@@ -60,3 +60,16 @@ body * {
   /* background-color: rgba(127, 195, 108, 0.5); */
 }
 /*# sourceMappingURL=dotCursor.css.map */
+
+@media screen and (max-width: 992px) {
+  html,
+  html *,
+  body,
+  body * {
+    cursor: initial !important;
+  }
+  
+  .cursor-dot, .cursor-dot-outline {
+      display: none;
+  }
+}
