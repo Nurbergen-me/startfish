@@ -121,9 +121,6 @@ h2 {
   z-index: 10;
   overflow: hidden;
 }
-.button-l:hover {
-  color: #fff;
-}
 .button-l:hover .button-s {
   width: calc(100% + 15px);
   height: calc(100% + 15px);
@@ -133,7 +130,7 @@ h2 {
 
 .button-s {
   display: inline;
-  background-color: rgb(35, 35, 35);
+  background-color: #FFE712;
   position: absolute;
   top: 0;
   left: 0;
@@ -144,6 +141,7 @@ h2 {
   transition: all 0.7s cubic-bezier(0.25, 0.74, 0.22, 0.99) 0s;
   backface-visibility: hidden;
   z-index: -1;
+  pointer-events: none;
 }
 
 li {
@@ -255,6 +253,9 @@ li {
 .nav_burger_item:last-child {
   width: 10px;
 }
+.nav_favorites {
+  display: none;
+}
 
 .hidden {
   position: absolute;
@@ -263,7 +264,7 @@ li {
   padding-top: 40px;
   right: -10%;
   width: 0%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 40px);
   z-index: 1;
   opacity: 0;
   overflow: hidden;
@@ -281,7 +282,7 @@ li {
 .hidden_menu_item {
   display: block;
   font-family: "Bereg";
-  font-size: 25px;
+  font-size: 28px;
   line-height: 46px;
   white-space: nowrap;
 }
@@ -291,14 +292,16 @@ li {
   width: -moz-fit-content;
   width: fit-content;
   margin-left: auto;
-  margin-bottom: 120px;
+  margin-bottom: 30vh;
 }
 .hidden_btn {
+  height: 45px;
   border: 1px solid #DEDEDE;
-  border-radius: 15px;
+  border-radius: 30px;
   padding: 9px 18px;
   display: block;
   margin: 0 auto;
+  color: #000;
 }
 
 .animation_slide > div {
@@ -376,17 +379,24 @@ li {
 .header {
   background: url("../img/main-bg.svg") no-repeat center bottom/cover;
 }
+.header-home {
+  min-height: 800px;
+  height: 100vh;
+}
 .header_offer {
   padding: 116px 0 124px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 2fr;
   align-items: flex-start;
   justify-content: end;
 }
 .header_info {
   margin-top: 18px;
   margin-left: auto;
-  width: 578px;
+  width: 512px;
+}
+.header_title {
+  margin-left: 140px;
 }
 .header_desc {
   font-size: 16px;
@@ -429,6 +439,7 @@ li {
 }
 
 .cons {
+  padding-top: 30px;
   padding-bottom: 50px;
 }
 .cons_wrap {

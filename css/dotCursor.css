@@ -48,8 +48,8 @@ body * {
 }
 
 .cursor-dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: #f4f4f4;
   mix-blend-mode: difference;
 }

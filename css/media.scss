@@ -2,6 +2,11 @@
     h1 {
         font-size: 60px;
     }
+    .header {
+        &_title {
+            margin-left: 0;
+        }
+    }
     .container {
         width: 1140px;
     }
@@ -41,6 +46,9 @@
 @media screen and (max-width: 1200px) {
     .container {
         width: 960px;
+    }
+    h1 {
+        font-size: 46px;
     }
     .header {
         padding-bottom: 100px;
@@ -94,6 +102,9 @@
     }
     .container {
         width: 720px;
+    }
+    .header-home {
+        height: auto;
     }
     .header_offer {
         padding-top: 80px;
@@ -392,6 +403,14 @@
     .container {
         width: 90%;
     }
+    .header {
+        &_desc {
+            font-size: 12px;
+        }
+    }
+    .cons {
+        padding-top: 0;
+    }
     .steps_circle {
         zoom: 0.7;
     }
@@ -413,9 +432,16 @@
     .fixed-plans {
         &_list {
             grid-template-columns: 1fr;
+            gap: 40px
         }
         .mobile-hide {
             display: none;
+        }
+        &_col {
+            &_list {
+                min-height: auto;
+                margin-bottom: 20px;
+            }
         }
     }
     .presentation {

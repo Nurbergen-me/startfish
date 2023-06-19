@@ -126,7 +126,7 @@ h2 {
     overflow: hidden;
 
     &:hover {
-        color: #fff;
+        // color: #fff;
         .button-s {
             width: calc(100% + 15px);
             height: calc(100% + 15px);
@@ -138,7 +138,7 @@ h2 {
 
 .button-s {
     display: inline;
-    background-color: rgb(35, 35, 35);
+    background-color: #FFE712;
     position: absolute;
     top: 0;
     left: 0;
@@ -149,6 +149,7 @@ h2 {
     transition: all 0.7s cubic-bezier(0.25, 0.74, 0.22, 0.99) 0s;
     backface-visibility: hidden;
     z-index: -1;
+    pointer-events: none;
 }
 
 li {
@@ -278,6 +279,10 @@ li {
         }
     }
 
+    &_favorites {
+        display: none;
+    }
+
 }
 
 .hidden {
@@ -287,7 +292,7 @@ li {
     padding-top: 40px;
     right: -10%;
     width: 0%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 40px);
     z-index: 1;
     opacity: 0;
     overflow: hidden;
@@ -306,7 +311,7 @@ li {
         &_item {
             display: block;
             font-family: 'Bereg';
-            font-size: 25px;
+            font-size: 28px;
             line-height: 46px;
             white-space: nowrap;
         }
@@ -317,15 +322,17 @@ li {
         gap: 40px;
         width: fit-content;
         margin-left: auto;
-        margin-bottom: 120px;
+        margin-bottom: 30vh;
     }
 
     &_btn {
+        height: 45px;
         border: 1px solid #DEDEDE;
-        border-radius: 15px;
+        border-radius: 30px;
         padding: 9px 18px;
         display: block;
         margin: 0 auto;
+        color: #000;
     }
     
 }
@@ -384,11 +391,16 @@ li {
 
 .header {
     background: url('../img/main-bg.svg') no-repeat center bottom / cover;
+    
+    &-home {
+        min-height: 800px;
+        height: 100vh;
+    }
 
     &_offer {
         padding: 116px 0 124px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 3fr 2fr;
         align-items: flex-start;
         justify-content: end;
     }
@@ -396,7 +408,11 @@ li {
     &_info {
         margin-top: 18px;
         margin-left: auto;
-        width: 578px;
+        width: 512px;
+    }
+
+    &_title {
+        margin-left: 140px;
     }
 
     &_desc {
@@ -445,6 +461,7 @@ li {
 }
 
 .cons {
+    padding-top: 30px;
     padding-bottom: 50px;
 
     &_wrap {
