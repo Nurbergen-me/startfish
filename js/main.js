@@ -82,3 +82,127 @@ if (buttonL) {
         buttonS.style.top = (y - 20) * 1.5 + 'px'
     })
 }
+
+
+// Select category
+
+let branches = [
+    {
+        id: 1,
+        name: 'Отрасль 1',
+        selected: true
+    },
+    {
+        id: 2,
+        name: 'Отрасль 2',
+        selected: false
+    },
+    {
+        id: 3,
+        name: 'Отрасль 3',
+        selected: false
+    },
+];
+let services = [
+    {
+        id: 1,
+        name: 'транспорт и логистика',
+        selected: true
+    },
+    {
+        id: 2,
+        name: 'гастрономия',
+        selected: false
+    },
+    {
+        id: 3,
+        name: 'event и развлечения',
+        selected: false
+    },
+    {
+        id: 4,
+        name: 'образование',
+        selected: false
+    },
+    {
+        id: 5,
+        name: 'Красота и здоровье',
+        selected: false
+    },
+    {
+        id: 6,
+        name: 'Строительство и недвижимость',
+        selected: false
+    },
+    {
+        id: 7,
+        name: 'IT',
+        selected: false
+    },
+    {
+        id: 8,
+        name: 'финансы и аналитика',
+        selected: false
+    },
+    {
+        id: 9,
+        name: 'другое',
+        selected: false
+    }
+]
+
+const categoriesWrap = document.querySelector('.templates_categories')
+
+setCategories(services)
+
+const sortBtns = document.querySelectorAll('.sort-btn')
+const clearBtn = document.querySelector('.clear-btn')
+
+if (sortBtns) {
+    sortBtns.forEach((btn, index) => {
+
+        btn.addEventListener('click',(item) => {
+            sortBtns.forEach((k) => {
+                k.classList.remove('active')
+            })
+
+            if (btn.dataset.name === 'branches') {
+                setCategories(branches)
+                btn.classList.add('active')
+            } else if (btn.dataset.name === 'services') {
+                setCategories(services)
+                btn.classList.add('active')
+            } else if (btn.dataset.name === 'clear') {
+                branches.forEach((category) => {
+                    category.selected = false
+                })
+                services.forEach((category) => {
+                    category.selected = false
+                })
+                setCategories(branches)
+            }
+        })
+    })
+}
+
+function setCategories(array) {
+    if (categoriesWrap) {
+        categoriesWrap.innerHTML = ''
+        array.forEach(item => {
+            let div = document.createElement('div')
+            const divText = document.createTextNode(item.name)
+            div.classList.add('templates_category')
+            if (item.selected) {
+                div.classList.add('active')
+            }
+            div.appendChild(divText)
+            div.dataset.id = item.id
+            
+            div.addEventListener('click', (e) => {
+                div.classList.toggle('active')
+                item.selected = !item.selected
+            })
+            categoriesWrap.appendChild(div)
+        })
+    }
+}

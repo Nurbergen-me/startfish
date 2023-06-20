@@ -535,8 +535,11 @@ li {
   line-height: 1em;
   padding: 4px 0;
 }
-.sort-btn.active img {
+.sort-btn img {
   transform: rotate(180deg);
+}
+.sort-btn.active img {
+  transform: rotate(0deg);
 }
 
 .clear-btn {
