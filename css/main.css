@@ -197,10 +197,14 @@ li {
   align-items: center;
   gap: 40px;
   margin-left: auto;
-  margin-right: 85px;
+  margin-right: 40px;
 }
 .nav_menu_item {
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #5C5C5C;
+}
+.nav_menu_item:hover, .nav_menu_item.active {
   color: #161414;
 }
 .nav_btns {
@@ -212,10 +216,15 @@ li {
   background: transparent;
   border: 1px solid #DEDEDE;
   border-radius: 15px;
-  padding: 8px 20px;
-  font-size: 12px;
+  padding: 12px 20px;
+  font-size: 16px;
   color: #161414;
+  transition: 0.5s ease;
   cursor: pointer;
+}
+.nav_btn:hover {
+  background: #FFE712;
+  border-color: #FFE712;
 }
 .nav_burger {
   display: none;
@@ -381,7 +390,8 @@ li {
 }
 .header-home {
   min-height: 800px;
-  height: 100vh;
+  height: calc(100vh - 30px);
+  margin-bottom: 30px;
 }
 .header_offer {
   padding: 116px 0 124px;
@@ -392,7 +402,6 @@ li {
 }
 .header_info {
   margin-top: 18px;
-  margin-left: auto;
   width: 512px;
 }
 .header_title {
@@ -534,9 +543,11 @@ li {
   gap: 8px;
   line-height: 1em;
   padding: 4px 0;
+  font-size: 21px;
 }
 .sort-btn img {
   transform: rotate(180deg);
+  height: 8px;
 }
 .sort-btn.active img {
   transform: rotate(0deg);
