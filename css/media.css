@@ -8,6 +8,9 @@
   .container {
     width: 1140px;
   }
+  .project_title {
+    font-size: 48px;
+  }
   .steps_circle:not(:first-child) {
     margin-left: -85px;
   }
@@ -44,6 +47,9 @@
   }
   .header {
     padding-bottom: 100px;
+  }
+  .project_title {
+    font-size: 42px;
   }
   .cons {
     margin-top: -100px;
@@ -84,6 +90,27 @@
   }
   .container {
     width: 720px;
+  }
+  .project_top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .project_body {
+    grid-template-columns: 1fr;
+  }
+  .project_obligation {
+    display: none;
+  }
+  .project_obligation_sm {
+    display: block;
+    margin-top: 40px;
+  }
+  .project_inputs_bottom {
+    align-items: center;
+    gap: 40px;
+  }
+  .project .footer {
+    display: none;
   }
   .header-home {
     height: auto;
@@ -349,6 +376,31 @@
   .header_desc {
     font-size: 12px;
   }
+  .project .nav_burger, .project .nav_burger_close {
+    width: 18px;
+  }
+  .project_title {
+    font-size: 25px;
+  }
+  .project_inputs_wrap {
+    grid-template-columns: 1fr;
+    max-width: 95%;
+  }
+  .project_inputs_wrap.with-textarea {
+    grid-template-columns: 1fr;
+    max-width: 95%;
+  }
+  .project_inputs_bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 56px;
+    gap: 16px;
+  }
+  .project_services_item {
+    font-size: 12px;
+    padding: 7px 14px;
+    margin-top: 16px;
+  }
   .cons {
     padding-top: 0;
   }
@@ -384,5 +436,11 @@
   }
   .template_footer {
     flex-direction: column-reverse;
+  }
+  .sort-btn {
+    font-size: 14px;
+  }
+  .sort-btn img {
+    height: 6px;
   }
 }/*# sourceMappingURL=media.css.map */

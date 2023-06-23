@@ -10,6 +10,11 @@
     .container {
         width: 1140px;
     }
+    .project {
+        &_title {
+            font-size: 48px;
+        }
+    }
     .steps_circle:not(:first-child) {
         margin-left: -85px;
     }
@@ -52,6 +57,11 @@
     }
     .header {
         padding-bottom: 100px;
+    }
+    .project {
+        &_title {
+            font-size: 42px;
+        }
     }
     .cons {
         margin-top: -100px;
@@ -102,6 +112,34 @@
     }
     .container {
         width: 720px;
+    }
+    .project {
+        &_top {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        &_body {
+            grid-template-columns: 1fr;
+        }
+        &_obligation {
+            display: none;
+
+            &_sm {
+                display: block;
+                margin-top: 40px;
+            }
+        }
+
+        &_inputs {
+            &_bottom {
+                align-items: center;
+                gap: 40px;
+            }
+        }
+
+        .footer {
+            display: none;
+        }
     }
     .header-home {
         height: auto;
@@ -408,6 +446,38 @@
             font-size: 12px;
         }
     }
+    .project {
+        .nav_burger, .nav_burger_close {
+            width: 18px;
+        }
+        &_title {
+            font-size: 25px;
+        }
+        &_inputs {
+            &_wrap {
+                grid-template-columns: 1fr;
+                max-width: 95%;
+
+                &.with-textarea {
+                    grid-template-columns: 1fr;
+                    max-width: 95%;
+                }
+            }
+            &_bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 56px;
+                gap: 16px;
+            }
+        }
+        &_services {
+            &_item {
+                font-size: 12px;
+                padding: 7px 14px;
+                margin-top: 16px;
+            }
+        }
+    }
     .cons {
         padding-top: 0;
     }
@@ -452,6 +522,12 @@
 
         &_footer {
             flex-direction: column-reverse;
+        }
+    }
+    .sort-btn {
+        font-size: 14px;
+        img {
+            height: 6px;
         }
     }
 }

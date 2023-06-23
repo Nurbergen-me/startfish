@@ -1,10 +1,46 @@
-// Hidden menu
+// Hidden project form
+const project = document.querySelector('.project')
+const navProjectBtn = document.querySelector('.nav_btn')
+const hiddenProjectBtn = document.querySelector('.hidden_btn')
+const projectClose = document.querySelector('#project-close')
 
+if (project) {
+    navProjectBtn.addEventListener('click', function() {
+        project.classList.add('show')
+        body.classList.add('noscroll')
+    })
+    hiddenProjectBtn.addEventListener('click', function() {
+        project.classList.add('show')
+        body.classList.add('noscroll')
+    })
+    projectClose.addEventListener('click', function() {
+        project.classList.remove('show')
+        body.classList.remove('noscroll')
+    })
+}
+
+// Project services choose
+
+
+const projectServices = document.querySelectorAll('.project_services_item')
+
+if (projectServices) {
+    projectServices.forEach(item => {
+        item.addEventListener('click', (e) => {
+            projectServices.forEach(elem => {
+                elem.classList.remove('active')
+            })
+            item.classList.add('active')
+        })
+    })
+}
+
+// Hidden menu
 
 const body = document.querySelector('body')
 const hidden = document.querySelector('.hidden')
 const burgerMenu = document.querySelector('.nav_burger_menu')
-const burgerClose = document.querySelector('.nav_burger_close')
+const burgerClose = document.querySelector('#burger_close')
 
 burgerMenu.addEventListener('click', function() {
     burgerMenu.classList.add('hide')
