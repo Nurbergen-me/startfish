@@ -574,6 +574,8 @@ li {
 .header_bubbles {
   display: flex;
   align-items: flex-start;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .header_bubble {
   background: #FFE712;

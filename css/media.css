@@ -43,10 +43,19 @@
     width: 960px;
   }
   h1 {
-    font-size: 46px;
+    font-size: 60px;
   }
   .header {
     padding-bottom: 100px;
+  }
+  .header_title {
+    font-size: 52px;
+  }
+  .header_info {
+    width: 460px;
+  }
+  .header_offer {
+    padding-top: 90px;
   }
   .project_title {
     font-size: 42px;
@@ -115,8 +124,19 @@
   .header-home {
     height: auto;
   }
+  .header {
+    padding-bottom: 30px;
+    background-position-x: -760px;
+  }
   .header_offer {
+    display: block;
     padding-top: 80px;
+  }
+  .header_desc {
+    margin-bottom: 20px;
+  }
+  .header_bubbles {
+    margin-left: auto;
   }
   .header_info {
     width: auto;
@@ -143,6 +163,9 @@
   }
   .templates {
     padding-bottom: 80px;
+  }
+  .templates_btn {
+    background: #FFE712;
   }
   .fixed-plans_wrap {
     flex-direction: column;
@@ -245,10 +268,7 @@
   }
   .header {
     padding-bottom: 240px;
-  }
-  .header_offer {
-    display: block;
-    padding-top: 50px;
+    background-position-x: center;
   }
   .header_desc {
     margin-bottom: 60px;
@@ -383,6 +403,12 @@
   .container {
     width: 90%;
   }
+  .header_title {
+    font-size: 33px;
+  }
+  .header_offer {
+    padding-top: 40px;
+  }
   .header_desc {
     font-size: 12px;
   }
@@ -469,6 +495,9 @@
   .template_footer_price_sm {
     display: block;
     margin-bottom: 0;
+  }
+  .template_footer_text {
+    font-size: 12px;
   }
   .sort-btn {
     font-size: 14px;

@@ -622,6 +622,7 @@ li {
     &_bubbles {
         display: flex;
         align-items: flex-start;
+        width: fit-content;
     }
 
     &_bubble {
