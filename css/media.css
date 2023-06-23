@@ -420,6 +420,7 @@
   }
   .templates_wrap {
     display: block;
+    margin-top: 20px;
   }
   .templates_item {
     display: block;

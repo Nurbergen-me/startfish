@@ -230,13 +230,16 @@ li {
 .nav_burger {
   display: none;
   position: relative;
-  width: 18px;
+  width: 28px;
 }
 .nav_burger_menu {
-  width: 18px;
+  width: 28px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 6px;
+  height: 20px;
+  padding: 0 5px;
 }
 .nav_burger_menu.hide {
   pointer-events: none;
@@ -455,10 +458,11 @@ li {
   margin-bottom: 30vh;
 }
 .hidden_btn {
+  background: #FFE712;
   height: 45px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #FFE712;
   border-radius: 30px;
-  padding: 9px 18px;
+  padding: 10px 24px;
   display: block;
   margin: 0 auto;
   color: #000;
