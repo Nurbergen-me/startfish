@@ -1,40 +1,3 @@
-// Hidden project form
-const project = document.querySelector('.project')
-const navProjectBtn = document.querySelector('.nav_btn')
-const hiddenProjectBtn = document.querySelector('.hidden_btn')
-const projectClose = document.querySelector('#project-close')
-
-if (project) {
-    navProjectBtn.addEventListener('click', function() {
-        project.classList.add('show')
-        body.classList.add('noscroll')
-    })
-    hiddenProjectBtn.addEventListener('click', function() {
-        project.classList.add('show')
-        body.classList.add('noscroll')
-    })
-    projectClose.addEventListener('click', function() {
-        project.classList.remove('show')
-        body.classList.remove('noscroll')
-    })
-}
-
-// Project services choose
-
-
-const projectServices = document.querySelectorAll('.project_services_item')
-
-if (projectServices) {
-    projectServices.forEach(item => {
-        item.addEventListener('click', (e) => {
-            projectServices.forEach(elem => {
-                elem.classList.remove('active')
-            })
-            item.classList.add('active')
-        })
-    })
-}
-
 // Hidden menu
 
 const body = document.querySelector('body')
@@ -56,6 +19,44 @@ burgerClose.addEventListener('click', function() {
     body.classList.remove('noscroll')
 })
 
+// Hidden project form
+const project = document.querySelector('.project')
+const navProjectBtn = document.querySelector('.nav_btn')
+const hiddenProjectBtn = document.querySelector('.hidden_btn')
+const projectClose = document.querySelector('#project-close')
+
+if (project) {
+    navProjectBtn.addEventListener('click', function() {
+        project.classList.add('show')
+        body.classList.add('noscroll')
+    })
+    hiddenProjectBtn.addEventListener('click', function() {
+        project.classList.add('show')
+        body.classList.add('noscroll')
+    })
+    projectClose.addEventListener('click', function() {
+        project.classList.remove('show')
+        if (!hidden.classList.contains('show')) {
+            body.classList.remove('noscroll')
+        }
+    })
+}
+
+// Project services choose
+
+
+const projectServices = document.querySelectorAll('.project_services_item')
+
+if (projectServices) {
+    projectServices.forEach(item => {
+        item.addEventListener('click', (e) => {
+            projectServices.forEach(elem => {
+                elem.classList.remove('active')
+            })
+            item.classList.add('active')
+        })
+    })
+}
 
 // Steps circles
 
@@ -122,7 +123,7 @@ if (buttonL) {
 
 // Select category
 
-let branches = [
+let services = [
     {
         id: 1,
         name: 'Отрасль 1',
@@ -139,11 +140,11 @@ let branches = [
         selected: false
     },
 ];
-let services = [
+let branches = [
     {
         id: 1,
         name: 'транспорт и логистика',
-        selected: true
+        selected: false
     },
     {
         id: 2,
@@ -189,7 +190,7 @@ let services = [
 
 const categoriesWrap = document.querySelector('.templates_categories')
 
-setCategories(services)
+// setCategories(branches)
 
 const sortBtns = document.querySelectorAll('.sort-btn')
 const clearBtn = document.querySelector('.clear-btn')
@@ -198,24 +199,31 @@ if (sortBtns) {
     sortBtns.forEach((btn, index) => {
 
         btn.addEventListener('click',(item) => {
-            sortBtns.forEach((k) => {
-                k.classList.remove('active')
-            })
 
-            if (btn.dataset.name === 'branches') {
-                setCategories(branches)
-                btn.classList.add('active')
-            } else if (btn.dataset.name === 'services') {
-                setCategories(services)
-                btn.classList.add('active')
-            } else if (btn.dataset.name === 'clear') {
-                branches.forEach((category) => {
-                    category.selected = false
-                })
-                services.forEach((category) => {
-                    category.selected = false
-                })
-                setCategories(branches)
+            if (btn.classList.contains('active')) {
+                btn.classList.remove('active')
+                setCategories([])
+            } else {
+    
+                if (btn.dataset.name === 'branches') {
+                    setCategories(branches)
+                    btn.classList.add('active')
+                } else if (btn.dataset.name === 'services') {
+                    setCategories(services)
+                    btn.classList.add('active')
+                } else if (btn.dataset.name === 'clear') {
+                    btn.classList.add('hidden')
+                    branches.forEach((category) => {
+                        category.selected = false
+                    })
+                    services.forEach((category) => {
+                        category.selected = false
+                    })
+                    sortBtns.forEach( x => {
+                        x.classList.remove('active')
+                    })
+                    setCategories([])
+                }
             }
         })
     })
@@ -237,6 +245,12 @@ function setCategories(array) {
             div.addEventListener('click', (e) => {
                 div.classList.toggle('active')
                 item.selected = !item.selected
+
+                if (array.filter(x => x.selected).length > 0) {
+                    clearBtn.classList.remove('hidden')
+                } else {
+                    clearBtn.classList.add('hidden')
+                }
             })
             categoriesWrap.appendChild(div)
         })

@@ -698,7 +698,7 @@ li {
 }
 .sort-btn img {
   transform: rotate(180deg);
-  height: 8px;
+  width: 11px;
 }
 .sort-btn.active img {
   transform: rotate(0deg);
@@ -1028,7 +1028,7 @@ li {
   margin: 90px 0 120px;
 }
 .stamps .plans_item {
-  width: 260px;
+  width: 23%;
 }
 .stamps .complect {
   padding-bottom: 240px;

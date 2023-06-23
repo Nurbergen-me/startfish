@@ -343,6 +343,10 @@
         &_item {
             flex-direction: column;
         }
+        &_desc {
+            height: auto;
+            margin-bottom: 50px;
+        }
     }
     .templates {
         padding-bottom: 80px;
@@ -527,6 +531,7 @@
     .sort-btn {
         font-size: 14px;
         img {
+            width: auto;
             height: 6px;
         }
     }

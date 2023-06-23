@@ -294,6 +294,10 @@
   .cons_item {
     flex-direction: column;
   }
+  .cons_desc {
+    height: auto;
+    margin-bottom: 50px;
+  }
   .templates {
     padding-bottom: 80px;
   }
@@ -441,6 +445,7 @@
     font-size: 14px;
   }
   .sort-btn img {
+    width: auto;
     height: 6px;
   }
 }/*# sourceMappingURL=media.css.map */
