@@ -476,8 +476,8 @@ li {
 
     &_btn {
         width: 175px;
-        height: 43px;
-        border-radius: 15px;
+        height: 44px;
+        border-radius: 22px;
         color: #161414;
     }
 }
@@ -523,14 +523,11 @@ li {
     }
 
     &_btn {
-        background: #FFE712;
-        height: 45px;
-        border: 1px solid #FFE712;
-        border-radius: 30px;
-        padding: 10px 24px;
-        display: block;
+        width: 175px;
+        height: 44px;
+        border-radius: 22px;
+        color: #161414;
         margin: 0 auto;
-        color: #000;
     }
     
 }
@@ -1020,6 +1017,10 @@ li {
             font-size: 40px;
             font-weight: 600;
             margin-bottom: 35px;
+
+            &_sm {
+                display: none;
+            }
         }
         &_text {
             font-weight: 600;
@@ -1028,7 +1029,7 @@ li {
         }
     
         &_circle {
-            background: #FFE712;
+            background: #EDF6FF;
             border-radius: 50%;
             width: 148px;
             height: 148px;

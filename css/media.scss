@@ -270,6 +270,13 @@
             }
         }
     }
+    .template {
+        &_footer {
+            &_circle {
+                background: #FFE712;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -439,6 +446,11 @@
             }
         }
     }
+    .presentation {
+        .container {
+            width: 100%;
+        }
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -527,6 +539,30 @@
 
         &_footer {
             flex-direction: column-reverse;
+            padding: 20px 30px;
+
+            &_right {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                max-width: 300px;
+            }
+            &_circle {
+                width: 100px;
+                min-width: 100px;
+                height: 100px;
+                font-size: 12px;
+            }
+            &_price {
+                display: none;
+                font-size: 26px;
+
+                &_sm {
+                    display: block;
+                    margin-bottom: 0;
+                }
+            }
         }
     }
     .sort-btn {
