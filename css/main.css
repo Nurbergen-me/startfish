@@ -382,6 +382,9 @@ li {
   gap: 65px;
   margin-top: 62px;
 }
+.project_inputs_2 {
+  margin-top: -30px;
+}
 .project_input {
   background: #FFFFFF;
   border-radius: 32px;
@@ -542,10 +545,8 @@ li {
   }
 }
 /* -------------  Header  ---------------- */
-.header {
-  background: url("../img/main-bg.svg") no-repeat center bottom/cover;
-}
 .header-home {
+  background: url("../img/main-bg.svg") no-repeat center bottom/cover;
   min-height: 800px;
   height: calc(100vh - 30px);
   margin-bottom: 30px;

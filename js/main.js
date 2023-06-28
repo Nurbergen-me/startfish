@@ -20,10 +20,14 @@ burgerClose.addEventListener('click', function() {
 })
 
 // Hidden project form
-const project = document.querySelector('.project')
+const project = document.querySelector('#offer-1')
+const project2 = document.querySelector('#offer-2')
+const webPages = document.querySelector('#web-pages')
+const webPagesBottom = document.querySelector('#web-pages-bottom')
 const navProjectBtn = document.querySelector('.nav_btn')
 const hiddenProjectBtn = document.querySelector('.hidden_btn')
 const projectClose = document.querySelector('#project-close')
+const projectClose2 = document.querySelector('#project-close2')
 
 if (project) {
     navProjectBtn.addEventListener('click', function() {
@@ -36,6 +40,23 @@ if (project) {
     })
     projectClose.addEventListener('click', function() {
         project.classList.remove('show')
+        if (!hidden.classList.contains('show')) {
+            body.classList.remove('noscroll')
+        }
+    })
+}
+
+if (project2) {
+    webPages.addEventListener('click', function() {
+        project2.classList.add('show')
+        body.classList.add('noscroll')
+    })
+    webPagesBottom.addEventListener('click', function() {
+        project2.classList.add('show')
+        body.classList.add('noscroll')
+    })
+    projectClose2.addEventListener('click', function() {
+        project2.classList.remove('show')
         if (!hidden.classList.contains('show')) {
             body.classList.remove('noscroll')
         }

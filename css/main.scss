@@ -429,6 +429,10 @@ li {
             gap: 65px;
             margin-top: 62px;
         }
+
+        &_2 {
+            margin-top: -30px;
+        }
     }
     &_input {
         background: #FFFFFF;
@@ -584,10 +588,9 @@ li {
 
 /* -------------  Header  ---------------- */
 
-.header {
-    background: url('../img/main-bg.svg') no-repeat center bottom / cover;
-    
+.header { 
     &-home {
+        background: url('../img/main-bg.svg') no-repeat center bottom / cover;
         min-height: 800px;
         height: calc(100vh - 30px);
         margin-bottom: 30px;
