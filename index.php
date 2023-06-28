@@ -4,6 +4,8 @@ $request = 'http://'.($_SERVER['SERVER_NAME']==='localhost')
         ? str_replace("/startfish", "",$_SERVER['REQUEST_URI'])
         : $_SERVER['REQUEST_URI']; 
 
+echo $_SERVER['SERVER_NAME'];
+echo $_SERVER['REQUEST_URI'];
 var_dump($request);
 
 $request = explode('?', $request)[0];
